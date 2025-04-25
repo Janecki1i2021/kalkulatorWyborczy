@@ -1,4 +1,4 @@
-document.addEventListener('DOM', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const formularzKomitetu = document.getElementById('formularz-komitetu');
     const poleNazwaKomitetu = document.getElementById('nazwa-komitetu');
     const checkboxCzyKoalicja = document.getElementById('czy-koalicja');
