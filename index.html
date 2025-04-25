@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator wyborczy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontener-glowny"> 
+        <h1>Kalkulator wyborczy</h1>
+
+        <section class="karta"> 
+            <h2>Rejestracja komitetów</h2>
+            <form id="formularz-komitetu"> 
+                <div class="grupa-formularza"> 
+                    <label for="nazwa-komitetu">Nazwa komitetu:</label> 
+                    <input type="text" id="nazwa-komitetu" required> 
+                </div>
+                <div class="grupa-formularza grupa-checkbox"> 
+                    <input type="checkbox" id="czy-koalicja"> 
+                    <label for="czy-koalicja">Czy jest koalicją</label> 
+                </div>
+                <div class="grupa-formularza"> 
+                    <label for="liczba-glosow">Ilość głosów:</label> 
+                    <input type="number" id="liczba-glosow" min="0" required> 
+                </div>
+                <div class="przyciski-formularza"> 
+                    <button type="button" id="przycisk-dodaj">Dodaj kolejny komitet</button> 
+                    <button type="button" id="przycisk-oblicz">Sprawdź wynik procentowy</button> 
+                </div>
+            </form>
+        </section>
+        <section class="karta"> 
+            <h2>Zarejestrowane komitety</h2>
+            <div id="kontener-listy-komitetow"> 
+                <ol id="lista-komitetow"> 
+                </ol>
+            </div>
+             <p id="info-brak-komitetow" class="tekst-informacyjny">Brak zarejestrowanych komitetów.</p> 
+        </section>
+
+        <section class="karta"> 
+            <h2>Wyniki wyborów</h2>
+            <div id="kontener-tabeli-wynikow"> 
+                 <table id="tabela-wynikow">
+                    <thead>
+                        <tr>
+                            <th>LP</th>
+                            <th>Nazwa komitetu</th>
+                            <th>Próg wyborczy (%)</th>
+                            <th>Ilość głosów</th>
+                            <th>Wynik procentowy</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cialo-tabeli-wynikow">
+                    </tbody>
+                </table>
+            </div>
+             <p id="info-brak-wynikow" class="tekst-informacyjny">Kliknij "Sprawdź wynik procentowy", aby zobaczyć wyniki.</p> 
+        </section>
+        <footer>
+            © Kacper Janecki
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
